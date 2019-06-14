@@ -1,0 +1,49 @@
+20:15:49 **** Incremental Build of configuration Release for project MQTT ****
+"D:\\ProgramasD\\sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\ProgramasD\sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2/bin/avr-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10802 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR     -I"D:\ProgramasD\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.23\cores\arduino" -I"D:\ProgramasD\sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.6.23\variants\mega" -I"C:\Users\JPARR\Documents\Arduino\libraries\ELClient" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"  -o  "sloeber.ino.cpp.o"
+In file included from ..\sloeber.ino.cpp:24:0:
+..\MQTT.ino:46:26: warning: unused parameter 'response' [-Wunused-parameter]
+ void mqttConnected(void* response) {
+                          ^
+..\MQTT.ino:56:29: warning: unused parameter 'response' [-Wunused-parameter]
+ void mqttDisconnected(void* response) {Serial.println("MQTT disconnected");connected = false;}
+                             ^
+..\MQTT.ino:82:26: warning: unused parameter 'response' [-Wunused-parameter]
+ void mqttPublished(void* response) {
+                          ^
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\ProgramasD\sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2/bin/avr-gcc" -Wall -Wextra -Os -Wl,--gc-sections,--relax -mmcu=atmega2560  -o "D:/IOT/IoT_WorkSpace/MQTT/Release/MQTT.elf"    .\sloeber.ino.cpp.o  .\libraries\ELClient\ELClient.cpp.o .\libraries\ELClient\ELClientCmd.cpp.o .\libraries\ELClient\ELClientMqtt.cpp.o .\libraries\ELClient\ELClientResponse.cpp.o .\libraries\ELClient\ELClientRest.cpp.o .\libraries\ELClient\ELClientSocket.cpp.o .\libraries\ELClient\ELClientWebServer.cpp.o .\libraries\ELClient\FP.cpp.o    D:/IOT/IoT_WorkSpace/MQTT/Release/arduino.ar  "-LD:/IOT/IoT_WorkSpace/MQTT/Release" -lm
+'Finished building: MQTT.elf'
+' '
+'Do all objcopy commands'
+"D:\ProgramasD\sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "D:\IOT\IoT_WorkSpace\MQTT/Release/MQTT.elf" "D:\IOT\IoT_WorkSpace\MQTT/Release/MQTT.eep"
+"D:\ProgramasD\sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2/bin/avr-objcopy" -O ihex -R .eeprom  "D:\IOT\IoT_WorkSpace\MQTT/Release/MQTT.elf" "D:\IOT\IoT_WorkSpace\MQTT/Release/MQTT.hex"
+'Finished building: MQTT.hex'
+' '
+'Building target: MQTT'
+'Printing size:'
+"D:\ProgramasD\sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2/bin/avr-size" -A "D:/IOT/IoT_WorkSpace/MQTT/Release/MQTT.elf"
+D:/IOT/IoT_WorkSpace/MQTT/Release/MQTT.elf  :
+section                     size      addr
+.data                        354   8389120
+.text                      11732         0
+.bss                         514   8389474
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               288         0
+.debug_info                 4687         0
+.debug_abbrev               3022         0
+.debug_line                 1520         0
+.debug_str                   998         0
+Total                      23196
+
+
+'Finished building target: MQTT'
+' '
+
+20:15:51 Build Finished. 0 errors, 3 warnings. (took 1s.580ms)
+
